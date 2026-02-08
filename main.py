@@ -3,7 +3,7 @@
 # Date: 08\02\26
 
 print("****GROSS SALARY CALCULATOR****")
-basic_salary=float(input("Enter the basic salary : "))
+basic_salary=float(input())
 da = basic_salary*0.70
 ta = basic_salary*0.30
 hra = basic_salary*0.10
