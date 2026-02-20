@@ -3,15 +3,21 @@
 # Date: 08\02\26
 
 print("****GROSS SALARY CALCULATOR****")
-basic_salary = float(input())
-da = basic_salary*0.70
-ta = basic_salary*0.30
-hra = basic_salary*0.10
-gross_salary = basic_salary + da + ta + hra
+basic = float(input())
 
-print("\nSalary Details :")
-print(f"{'Basic Salary' :15}\t{basic_salary}")
-print(f"{'DA' :15}\t{da}")
-print(f"{'TA' :15}\t{ta}")
-print(f"{'HRA' :15}\t{hra}")
-print(f"{'Gross Salary' :15}\t{gross_salary}")
+da = basic * 0.70
+ta = basic * 0.30
+hra = basic * 0.10
+gross = basic + da + ta + hra
+def fmt(x):
+    if x.is_integer():
+        return f"{x:.1f}"
+    else:
+        return f"{x:g}"
+
+print("Salary Details:")
+print(f"Basic Salary:    {fmt(basic)}")
+print(f"DA (70%):        {fmt(da)}")
+print(f"TA (30%):        {fmt(ta)}")
+print(f"HRA (10%):       {fmt(hra)}")
+print(f"Gross Salary:    {fmt(gross)}")
